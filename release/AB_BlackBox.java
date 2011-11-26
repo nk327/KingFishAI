@@ -357,12 +357,13 @@ public class AB_BlackBox {
 					//and 2 at the corners
 					float utilToAdd;
 					//are we in the target triangle?
-					if (isInTargetTriangle) {
+					if (isInTargetTriangle && at==turn) {
 //					if(Math.abs(dy)<=1){
 						//yes
 						//weigh distance laterally and sideways as well
 						//use hexagonal grid distance
 						//abs(dx)==2 means lateral pieces
+            /*
 						if(dx==0 && dy==0){
 							utilToAdd=0;
 						}else if(Math.abs(dx)<=2 && dy!=0){
@@ -370,9 +371,20 @@ public class AB_BlackBox {
 						}else{
 							utilToAdd=-3;
 						}
+            */
+						if(dx==0 && dy==0){
+							utilToAdd=0;
+						}else if(Math.abs(dx)<=3 && dy!=0){
+							utilToAdd=3;
+						}else{
+							utilToAdd=1;
+						}
+            /*
 						if(at!=turn){
 							utilToAdd=-utilToAdd;
 						}
+            */
+
 					}else{
 						//we're not in the winning corner
 						//prioritize the score to make it sort first by y distance

@@ -16,7 +16,7 @@ public class AwesomeAI extends Player {
 	static float vert = 1;
 	static float straggler = 1;
 	static float chain = 1;
-	static float interact = 1;
+	static float interact = 9;
 	
 	public AwesomeAI(Scanner scanner) {
 		super(scanner);
@@ -70,7 +70,7 @@ public class AwesomeAI extends Player {
 		Move m = null;
 
 		AB_BlackBox abbox=new AB_BlackBox(getMyturn(), horz, vert, straggler, chain);
-		AB_BlackBox.Message output=ABSearch.gimmeAMove(getBoard(), 4);
+		AB_BlackBox.Message output=ABSearch.gimmeAMove(getBoard(), 5);
 
 		if(output==AB_BlackBox.Message.NEED_TO_RECOMPUTE){
 			System.err.println("oh no, ab search not finding a move. sending null move");
