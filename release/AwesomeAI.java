@@ -1,8 +1,15 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class AwesomeAI extends Player {
+  public static boolean oldversion = true;
+
 	public static int specialMarblesToAdd = 0;
 	public static ArrayList<Cell> defaultSpecialMarbles = new ArrayList<Cell>();
 	public static int[][] initialBoard = new int[Const.BOARD_HEIGHT][Const.BOARD_WIDTH];
@@ -17,12 +24,41 @@ public class AwesomeAI extends Player {
 	static float straggler = 1;
 	static float chain = 1;
 	static float interact = 9;
-	
+
+  public static LosingMoveClassifier moveClassifier;
+
 	public AwesomeAI(Scanner scanner) {
 		super(scanner);
 		ABSearch = new AB_BlackBox(getMyturn(), horz, vert, straggler, chain);
 		aStarBlackBox = new AStarBlackBox(getMyturn());
 		aStarBlackBox.setMoveCutoff(5);
+
+    if (Const.LEARN_LIKE_A_BOSS) {
+      // LEARN LIKE AN EFFING BOSS.
+      // opponents who we don't always beat but we don't always lose to either
+      String[] unpredictableOpponents = {
+        "droptable",
+        "artificialwintelligence"
+      };
+
+      DataLoader dataLoader = new DataLoader(unpredictableOpponents);
+      dataLoader.loadData();
+      ArrayList<Example> allFishyExamples = dataLoader.getKingFishExamples();
+      allFishyExamples = dataLoader.removeTypicalExamples(allFishyExamples);
+      if (Const.DEBUG_KNN) {
+        dataLoader.printExamples(allFishyExamples);
+      }
+      moveClassifier = new LosingMoveClassifier(5, 0.5);
+
+      LosingMoveClassifierEvaluator evaluator = new LosingMoveClassifierEvaluator(5);
+      double successRate = evaluator.evaluate(moveClassifier, allFishyExamples);
+      System.err.println("Success rate: " + successRate);
+
+      moveClassifier.setTrainingExamples(allFishyExamples);
+      if (Const.DEBUG_KNN) {
+        System.exit(0);
+      }
+    }
 	}
 
 	@Override
@@ -139,19 +175,47 @@ public class AwesomeAI extends Player {
 
 	public int getOpponentTurn() {
 		return Util.flipTurn(getMyturn());
-	}
+  }
 
-	public static void main(String args[]){
-		
-		if (args.length ==5){
-			System.err.println("THINGS ARE WORKING");
-			horz = Float.parseFloat(args[0]);
-			vert = Float.parseFloat(args[1]);
-			straggler = Float.parseFloat(args[2]);
-			chain = Float.parseFloat(args[3]);
-			interact = Float.parseFloat(args[4]);	
-		}
-				
+  public static void main(String args[]){
+    if (args.length ==5){
+      System.err.println("THINGS ARE WORKING");
+      horz = Float.parseFloat(args[0]);
+      vert = Float.parseFloat(args[1]);
+      straggler = Float.parseFloat(args[2]);
+      chain = Float.parseFloat(args[3]);
+      interact = Float.parseFloat(args[4]);	
+    }
+
+    if (Const.USE_AB_TESTING) {
+      int version = 0;
+      try {
+        File file = new File("abtest.txt");
+        Scanner sc = new Scanner(file);
+        version = Integer.parseInt(sc.nextLine());
+        AwesomeAI.oldversion = version == 1 ? true : false;
+        sc.close();
+      } catch (FileNotFoundException e) {
+        System.err.println(e.toString());
+      }
+      try {
+        BufferedWriter out = new BufferedWriter(new FileWriter("abtest.txt"));
+        String result = version == 1 ? "0" : "1";
+        out.write(result);
+        out.close();
+      } catch (IOException e) {
+        System.err.println(e.toString());
+      }
+    }
+    Const.AB_TRY_NEW_WEIGHTS = AwesomeAI.oldversion ? false : true;
+    System.err.println("AB_TRY_NEW_WEIGHTS: " + Const.AB_TRY_NEW_WEIGHTS);
+
+    if (AwesomeAI.oldversion) {
+      System.err.println("Using old weights.");
+    } else {
+      System.err.println("Using new weights.");
+    }
+
 		int turn = 1;
 		AwesomeAI p = new AwesomeAI(new Scanner(System.in));
 

@@ -16,4 +16,8 @@ public class Const {
 	public static final boolean AB_USE_HASHING = true;
   public static final boolean USE_ASTAR_CLOSING = false;
 	public static final boolean USE_ASTAR_CLOSING_HEURISTIC = false;
+  public static boolean LEARN_LIKE_A_BOSS = true;
+  public static boolean AB_TRY_NEW_WEIGHTS = true;
+  public static final boolean USE_AB_TESTING = false; // test between old and new weights
+  public static final boolean DEBUG_KNN = false;
 }

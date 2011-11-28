@@ -14,5 +14,10 @@ cp ../AwesomeAI/src/AStarBlackBox.java .
 cp ../AwesomeAI/src/EndGameBlackBox.java .
 
 cp ../AwesomeAI/src/GameLogParser.java .
+cp ../AwesomeAI/src/DataLoader.java .
+cp ../AwesomeAI/src/Example.java .
+cp ../AwesomeAI/src/KNN.java .
+cp ../AwesomeAI/src/LosingMoveClassifier.java .
+cp ../AwesomeAI/src/LosingMoveClassifierEvaluator.java .
 
 echo "Copy complete, dawg."

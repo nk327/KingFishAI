@@ -1,3 +1,13 @@
+AB_TRY_NEW_WEIGHTS: false
+Using old weights.
+Loading examples took: 0.41138100000000005 seconds.
+Used 114 out of 436 files.
+Old size: 5668
+New size: 274
+Total of 274 examples.
+
+Successes: 204.0	Failures: 66.0
+Success rate: 0.7555555555555555
 Init state
             2            
            2 2           
@@ -51,7 +61,7 @@ turn = 2   myturn = 1
 OK lemme think...
             2            
            2 2           
-          2 2 *          
+          * 2 2          
          2 2 2 2         
 * * * * * * 2 * * * * * *
  * * * * * * * * * * * * 
@@ -75,7 +85,7 @@ Is state consistent? true
 My move: 16 12 12 8 -1 -1
             2            
            2 2           
-          2 2 *          
+          * 2 2          
          2 2 2 2         
 * * * * * * 2 * * * * * *
  * * * * * * * * * * * * 
@@ -96,9 +106,9 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 2 *          
+          * 2 2          
          2 2 2 2         
-* * * * * * 2 * 2 * * * *
+* * * * 2 * 2 * * * * * *
  * * * * * * * * * * * * 
   * * * * * * * * * * *  
    * * * * * * * * * *   
@@ -120,9 +130,9 @@ Is state consistent? true
 My move: 13 13 11 11 -1 -1
             *            
            2 2           
-          2 2 *          
+          * 2 2          
          2 2 2 2         
-* * * * * * 2 * 2 * * * *
+* * * * 2 * 2 * * * * * *
  * * * * * * * * * * * * 
   * * * * * * * * * * *  
    * * * * * * * * * *   
@@ -141,14 +151,14 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 2 *          
-         2 2 2 *         
-* * * * * * 2 * 2 * * * *
- * * * * * * * * 2 * * * 
+          * 2 2          
+         2 2 * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
   * * * * * * * * * * *  
    * * * * * * * * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
+    * * * * 3 * * * *    
+   * * * * * * * * * *   
   * * * * * * * * * * *  
  * * * * * 1 * * * * * * 
 * * * * 1 * 1 * * * * * *
@@ -165,14 +175,14 @@ Is state consistent? true
 My move: 14 12 10 12 -1 -1
             *            
            2 2           
-          2 2 *          
-         2 2 2 *         
-* * * * * * 2 * 2 * * * *
- * * * * * * * * 2 * * * 
+          * 2 2          
+         2 2 * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
   * * * * * * * * * * *  
    * * * * * * * * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
+    * * * * 3 * * * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
  * * * * * 1 * * * * * * 
 * * * * 1 * 1 * * * * * *
@@ -186,14 +196,14 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * 2 * * * *
- * * * * * * * * 2 * * * 
-  * * * * * * * 2 * * *  
+          * * 2          
+         2 2 * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
    * * * * * * * * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
+    * * * * 3 * * * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
  * * * * * 1 * * * * * * 
 * * * * 1 * 1 * * * * * *
@@ -206,27 +216,22 @@ OK lemme think...
 turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Opening
-Invalid move happened. There were still 0 moves left. Calculating new sequence.
-Using Astrizzles...
-Returning 5 moves.
-States visited: 6
-Number of states visited: 6
 Is state consistent? true
-My move: 12 12 8 12 -1 -1
+My move: 13 11 9 11 -1 -1
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * 2 * * * *
- * * * * * * * * 2 * * * 
-  * * * * * * * 2 * * *  
+          * * 2          
+         2 2 * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
    * * * * * * * * * *   
-    * * * * 1 * * * *    
-   * * * * 3 * * * * *   
+    * * * * 3 * * * *    
+   * * * * 1 * * * * *   
   * * * * * 1 * * * * *  
  * * * * * 1 * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+* * * * 1 * 1 * * * * * *
+         1 * * 1         
           * * 1          
            1 1           
             *            
@@ -236,18 +241,70 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * * * * * *
- * * * * * * * * 2 * * * 
-  * * * * * * * 2 * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
+          * * 2          
+         2 * * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * * * *    
+   * * * 2 1 * * * * *   
   * * * * * 1 * * * * *  
  * * * * * 1 * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+* * * * 1 * 1 * * * * * *
+         1 * * 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 1 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 182602
+Hash hits: 60203
+Total states visited: 182602
+Average states visited: 182602.0
+Time taken sorting: 0.7655500000000001
+Hashed states: 9980112478
+Is state consistent? true
+My move: 11 11 3 11 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 * 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * * * *    
+   * * * 2 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * 1 * 1 * * * * * *
+         1 * * 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 1 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * 1 * 1 * * * * * *
+         1 * 2 1         
           * * 1          
            1 1           
             *            
@@ -255,23 +312,186 @@ OK lemme think...
 
 turn = 1   myturn = 1
 It is my turn and I am thinking
-Progress is: Opening
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 239448
+Hash hits: 77706
+Total states visited: 422050
+Average states visited: 211025.0
+Time taken sorting: 1.164492
+Hashed states: 13653148140
 Is state consistent? true
-My move: 14 14 10 10 -1 -1
+My move: 12 8 12 10 -1 -1
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * * * * * *
- * * * * * * * * 2 * * * 
-  * * * * * * * 2 * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 1 * * * * *  
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * 2 * * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * 1 1 * * * * * *
+         1 * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * * * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * 2 * * * *   
+    * * * * 3 * * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * 1 1 * * * * * *
+         1 * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 230837
+Hash hits: 82294
+Total states visited: 652887
+Average states visited: 217629.0
+Time taken sorting: 1.5695240000000001
+Hashed states: 14944133658
+Is state consistent? true
+My move: 13 9 5 13 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * 2 * * * * *  
+   * * * * * 2 * * * *   
+    * * * * 3 * * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * 1 1 * * * * * *
+         * * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * 2 * * * *   
+    * * * * 3 2 * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * 1 1 * * * * * *
+         * * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 142648
+Hash hits: 43660
+Total states visited: 795535
+Average states visited: 198883.75
+Time taken sorting: 1.9022770000000002
+Hashed states: 1217786859
+Is state consistent? true
+My move: 12 12 11 11 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * 2 * * * *   
+    * * * * 3 2 * * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * * * * *  
  * * * * * 1 * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+* * * * * 1 * * * * * * *
+         * * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 2 * * *    
+   * * * * 1 * 2 * * *   
+  * * * * * 1 * * * * *  
+ * * * * * 1 * * * * * * 
+* * * * * 1 * * * * * * *
+         * * 2 1         
+          * * 1          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 178434
+Hash hits: 61157
+Total states visited: 973969
+Average states visited: 194793.8
+Time taken sorting: 2.2032030000000002
+Hashed states: 9713107620
+Is state consistent? true
+My move: 14 14 8 16 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 2 1 * *    
+   * * * * 1 * 2 * * *   
+  * * * * * 1 * * * * *  
+ * * * * * 1 * * * * * * 
+* * * * * 1 * * * * * * *
+         * * 2 1         
           * * *          
            1 1           
             *            
@@ -281,18 +501,18 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * * * * * *
- * * * * * * * * 2 * * * 
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
   * * * * * * * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 2 *    
-   * * * * 3 * * * * *   
-  * * * * 1 1 * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * 1 * 2 * * *   
+  * * * * * 1 * 2 * * *  
  * * * * * 1 * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+* * * * * 1 * * * * * * *
+         * * 2 1         
           * * *          
            1 1           
             *            
@@ -300,23 +520,186 @@ OK lemme think...
 
 turn = 1   myturn = 1
 It is my turn and I am thinking
-Progress is: Opening
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 297695
+Hash hits: 114836
+Total states visited: 1271664
+Average states visited: 211944.0
+Time taken sorting: 2.6627910000000004
+Hashed states: 14452168473
+Is state consistent? true
+My move: 13 15 11 13 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * 1 * 2 * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * 1 1 * * * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * 1 1 * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 254535
+Hash hits: 95700
+Total states visited: 1526199
+Average states visited: 218028.42
+Time taken sorting: 3.1071120000000003
+Hashed states: 14690144202
 Is state consistent? true
 My move: 11 11 7 11 -1 -1
             *            
            2 2           
-          2 * *          
-         2 2 2 *         
-* * * * * * 2 * * * * * *
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 2 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * * * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * 1 * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * * * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * 1 * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * 1 * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 329367
+Hash hits: 126602
+Total states visited: 1855566
+Average states visited: 231945.75
+Time taken sorting: 3.655088
+Hashed states: 15800187039
+Is state consistent? true
+My move: 9 11 5 11 -1 -1
+            *            
+           2 2           
+          * * 2          
+         2 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * * * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * 1 * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * *          
+         2 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * 1 * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
+          * * *          
+           1 1           
+            *            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 516034
+Hash hits: 180618
+Total states visited: 2371600
+Average states visited: 263511.12
+Time taken sorting: 4.4889090000000005
+Hashed states: 23929311557
+Is state consistent? true
+My move: 11 13 5 15 -1 -1
+            *            
+           2 2           
+          * * *          
+         2 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * * * 1 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
  * * * * * * * * 2 * * * 
-  * * * * * * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 2 *    
-   * * * * 3 * * * * *   
-  * * * * 1 1 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+* * * * * 1 * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -326,18 +709,18 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 * *          
-         2 2 * *         
-* * * * * * 2 * * * * * *
- * * * * * 2 * * 2 * * * 
-  * * * * * * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 2 *    
-   * * * * 3 * * * * *   
-  * * * * 1 1 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+          * * *          
+         * 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * 2 * 1 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * * * 2 * * * 
+* * * * * 1 * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -347,28 +730,28 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 248290
-Hash hits: 78904
-Total states visited: 248290
-Average states visited: 248290.0
-Time taken sorting: 2.5631440000000003
-Hashed states: 17638151807
+ABStates visited: 443045
+Hash hits: 151812
+Total states visited: 2814645
+Average states visited: 281464.5
+Time taken sorting: 5.447622
+Hashed states: 30243261057
 Is state consistent? true
-My move: 10 12 2 12 -1 -1
+My move: 12 10 11 11 -1 -1
             *            
            2 2           
-          2 1 *          
-         2 2 * *         
-* * * * * * 2 * * * * * *
- * * * * * 2 * * 2 * * * 
-  * * * * * * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 2 *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+          * * *          
+         * 1 * 2         
+* * * * 2 3 * * * * * * *
+ * * * 2 * 1 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * 1 * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -378,18 +761,18 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 1 *          
-         2 2 * *         
-* * * * * * 2 * * * * * *
- * * * * * 2 * * 2 * * * 
-  * * * * * * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 * * * * * * * *
-         1 1 * 1         
+          * * *          
+         * 1 * 2         
+* * * * * 3 * * * * * * *
+ * * * 2 * 1 1 1 * * * * 
+  * * 2 * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * 1 * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -399,28 +782,28 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 282145
-Hash hits: 87492
-Total states visited: 530435
-Average states visited: 265217.5
-Time taken sorting: 4.679437
-Hashed states: 22653172056
+ABStates visited: 290632
+Hash hits: 114344
+Total states visited: 3105277
+Average states visited: 282297.9
+Time taken sorting: 6.048832
+Hashed states: 17401158957
 Is state consistent? true
-My move: 13 11 12 10 -1 -1
+My move: 11 11 9 13 -1 -1
             *            
            2 2           
-          2 1 *          
-         2 2 * *         
-* * * * * * 2 * * * * * *
- * * * * * 2 * * 2 * * * 
-  * * * * * * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         1 * * 1         
+          * * *          
+         * 1 * 2         
+* * * * * 3 * * * * * * *
+ * * * 2 * 1 1 1 * * * * 
+  * * 2 * 2 * 2 * * * *  
+   * * * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -430,18 +813,18 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          2 1 *          
-         2 2 * *         
+          * * *          
+         * 1 * 2         
+* * * * * 3 * * * * * * *
+ * * * * * 1 1 1 * * * * 
+  * * 2 * 2 * 2 * * * *  
+   * 2 * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * 1 * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * * 2 * * 2 * * * 
-  * * * * 2 * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         1 * * 1         
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -451,28 +834,28 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 174686
-Hash hits: 68921
-Total states visited: 705121
-Average states visited: 235040.33
-Time taken sorting: 5.849299
-Hashed states: 1462191201
+ABStates visited: 438818
+Hash hits: 178797
+Total states visited: 3544095
+Average states visited: 295341.25
+Time taken sorting: 6.782088000000001
+Hashed states: 20253239840
 Is state consistent? true
-My move: 7 11 5 13 -1 -1
+My move: 10 12 4 14 -1 -1
             *            
            2 2           
-          2 1 *          
-         2 2 * *         
+          * * *          
+         * 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * 1 1 1 * * * * 
+  * * 2 * 2 * 2 * * * *  
+   * 2 * * 1 * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * * 2 1 * 2 * * * 
-  * * * * 2 * * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         1 * * 1         
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -482,18 +865,18 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * * 2 1 * 2 * * * 
+          * * *          
+         * 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * 1 1 1 * * * * 
   * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         1 * * 1         
+   * 2 * * 1 * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -503,28 +886,28 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 220960
-Hash hits: 72975
-Total states visited: 926081
-Average states visited: 231520.25
-Time taken sorting: 7.695017000000001
-Hashed states: 22661125386
+ABStates visited: 203105
+Hash hits: 80188
+Total states visited: 3747200
+Average states visited: 288246.16
+Time taken sorting: 7.091783
+Hashed states: 8301114682
 Is state consistent? true
-My move: 13 9 5 9 -1 -1
+My move: 5 11 3 9 -1 -1
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 2 1 * 2 * * * 
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
   * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         * * * 1         
+   * 2 * * 1 * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 2 *         
           * * *          
            1 1           
             *            
@@ -534,176 +917,72 @@ turn = 2   myturn = 1
 OK lemme think...
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         * * * 1         
           * * *          
-           1 1           
-            *            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 325633
-Hash hits: 97914
-Total states visited: 1251714
-Average states visited: 250342.8
-Time taken sorting: 10.423207000000001
-Hashed states: 31656196124
-Is state consistent? true
-My move: 15 13 14 12 -1 -1
-            *            
-           2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
   * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         * * * 1         
-          * 1 *          
-           1 *           
-            *            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           2 2           
-          * 1 *          
-         2 2 * *         
+   * 2 * * 1 * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * * * * * * *
-         * * * 1         
-          * 1 *          
-           1 *           
-            *            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 376352
-Hash hits: 102304
-Total states visited: 1628066
-Average states visited: 271344.34
-Time taken sorting: 14.025009
-Hashed states: 39574234537
-Is state consistent? true
-My move: 13 15 12 14 -1 -1
-            *            
-           2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
          * * * *         
-          * 1 *          
-           1 *           
+          * 2 *          
+           1 1           
             *            
-600000 600000 2 0 2
+600000 600000 2 0 1
 
-turn = 2   myturn = 1
-OK lemme think...
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 231463
+Hash hits: 83959
+Total states visited: 3978663
+Average states visited: 284190.22
+Time taken sorting: 7.551427
+Hashed states: 14618132950
+Is state consistent? true
+My move: 15 11 13 13 -1 -1
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
   * * * * 2 * 2 * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * * * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * 2         
-          * 1 *          
-           1 *           
+   * 2 * * 1 * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * * * * * * *
+         * * 1 *         
+          * 2 *          
+           * 1           
             *            
-600000 600000 2 0 1
+600000 600000 2 0 2
 
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 570086
-Hash hits: 196820
-Total states visited: 2198152
-Average states visited: 314021.72
-Time taken sorting: 17.719335
-Hashed states: 34367338973
-Is state consistent? true
-My move: 15 11 7 11 -1 -1
+turn = 2   myturn = 1
+OK lemme think...
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
   * * * * 2 * 2 * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * * * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * 2         
-          * 1 *          
-           * *           
-            *            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           2 2           
-          * 1 *          
-         2 2 * *         
+   * 2 * * 1 * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 * * * * * *  
-   * * * * 1 * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * 2         
-          * 1 *          
-           * *           
+         * * 1 *         
+          * * *          
+           2 1           
             *            
 600000 600000 2 0 1
 
@@ -711,259 +990,259 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 386560
-Hash hits: 103870
-Total states visited: 2584712
-Average states visited: 323089.0
-Time taken sorting: 20.716357000000002
-Hashed states: 28854253904
+ABStates visited: 260587
+Hash hits: 94949
+Total states visited: 4239250
+Average states visited: 282616.66
+Time taken sorting: 8.021241
+Hashed states: 13735151970
 Is state consistent? true
-My move: 7 11 6 12 -1 -1
+My move: 7 11 5 9 -1 -1
             *            
            2 2           
-          * 1 *          
-         2 2 * *         
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 1 * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * 2         
-          * 1 *          
-           * *           
+         * * 1 *         
+          * * *          
+           2 1           
             *            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
             *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 1 * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * 2         
-          * 1 *          
-           * *           
-            *            
+         * * 1 *         
+          * * *          
+           * 1           
+            2            
 600000 600000 2 0 1
 
 turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 456955
-Hash hits: 127621
-Total states visited: 3041667
-Average states visited: 337963.0
-Time taken sorting: 23.872107
-Hashed states: 29879299530
+ABStates visited: 208328
+Hash hits: 76051
+Total states visited: 4447578
+Average states visited: 277973.62
+Time taken sorting: 8.429873
+Hashed states: 12524119814
 Is state consistent? true
-My move: 14 12 13 13 -1 -1
+My move: 5 9 4 8 -1 -1
             *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * 1 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * 2 * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 1 * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
+         * * 1 *         
+          * * *          
+           * 1           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * 1 3 * 1 * * * * *
+ * * * * * * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * 1 * * * *   
+  * * * * * * * 2 * * *  
  * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
+* * * * * * * * 2 * * * *
+         * * 1 *         
+          * * *          
+           * 1           
+            2            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 306587
+Hash hits: 99146
+Total states visited: 4754165
+Average states visited: 279656.75
+Time taken sorting: 8.879493
+Hashed states: 13211194297
+Is state consistent? true
+My move: 9 13 5 9 -1 -1
+            *            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * 1 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * * * * * 
+* * * * * * * * 2 * * * *
+         * * 1 *         
+          * * *          
+           * 1           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            *            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * 1 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
          * * 1 2         
           * * *          
-           * *           
-            *            
+           * 1           
+            2            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 146127
+Hash hits: 56108
+Total states visited: 4900292
+Average states visited: 272238.44
+Time taken sorting: 9.128124
+Hashed states: 838881688
+Is state consistent? true
+My move: 4 8 0 12 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * 2 * * *  
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
+         * * 1 2         
+          * * *          
+           * 1           
+            2            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 1 * * * * *  
-   * * * * * * 3 * * *   
-    * * * * 1 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
+            1            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * 2 * * *  
  * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
+* * * * * * * * * * * * *
          * * 1 *         
           * * 2          
-           * *           
-            *            
+           * 1           
+            2            
 600000 600000 2 0 1
 
 turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 589020
-Hash hits: 168376
-Total states visited: 3630687
-Average states visited: 363068.7
-Time taken sorting: 27.239576000000003
-Hashed states: 28942391777
+ABStates visited: 159240
+Hash hits: 60089
+Total states visited: 5059532
+Average states visited: 266291.16
+Time taken sorting: 9.409183
+Hashed states: 908790122
 Is state consistent? true
-My move: 8 12 7 13 -1 -1
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 2 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * * * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
+My move: 13 13 12 14 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * 2 * * *  
  * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * 1 *         
-          * * 2          
-           * *           
-            *            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * 1 *         
-          * * 2          
-           * *           
-            *            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 869366
-Hash hits: 255920
-Total states visited: 4500053
-Average states visited: 409095.72
-Time taken sorting: 32.508769
-Hashed states: 44606568921
-Is state consistent? true
-My move: 13 13 7 11 -1 -1
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
+* * * * * * * 1 * * * * *
          * * * *         
           * * 2          
-           * *           
-            *            
+           * 1           
+            2            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * *         
+            1            
+           2 2           
           * * *          
-           * 2           
-            *            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 643634
-Hash hits: 197440
-Total states visited: 5143687
-Average states visited: 428640.6
-Time taken sorting: 36.261291
-Hashed states: 32408413855
-Is state consistent? true
-My move: 7 11 6 10 -1 -1
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 1 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
+         1 1 * 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 1 * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * * * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * 1 * * * * *
          * * * *         
-          * * *          
-           * 2           
-            *            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 2           
-          * 1 *          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 1 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * *         
-          * * *          
-           * *           
+          * * 2          
+           * 1           
             2            
 600000 600000 2 0 1
 
@@ -971,51 +1250,103 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 679777
-Hash hits: 187779
-Total states visited: 5823464
-Average states visited: 447958.78
-Time taken sorting: 38.94057
-Hashed states: 19204472881
+ABStates visited: 181155
+Hash hits: 65851
+Total states visited: 5240687
+Average states visited: 262034.34
+Time taken sorting: 9.766875
+Hashed states: 12436102925
 Is state consistent? true
-My move: 6 10 2 14 -1 -1
-            *            
+My move: 5 15 3 13 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * * * * *  
+ * * * * * * * * 2 * * * 
+* * * * * * * 1 * * * * *
+         * * * *         
+          * * 2          
+           * 1           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * * * * *  
+ * * * * * * * * * * * * 
+* * * * * * * 1 2 * * * *
+         * * * *         
+          * * 2          
+           * 1           
+            2            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 266892
+Hash hits: 98637
+Total states visited: 5507579
+Average states visited: 262265.66
+Time taken sorting: 10.369323000000001
+Hashed states: 17263151053
+Is state consistent? true
+My move: 15 13 11 13 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * * * * *  
+ * * * * * * 1 * * * * * 
+* * * * * * * 1 2 * * * *
+         * * * *         
+          * * 2          
+           * *           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * * * * * * *  
+ * * * * * * 1 * * * * * 
+* * * * * * * 1 2 * * * *
+         * * * *         
+          * * *          
            * 2           
-          * 1 1          
-         2 2 2 *         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * *         
-          * * *          
-           * *           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * * * * * * 
-* * * * 1 1 * 1 * * * * *
-         * * * *         
-          * * *          
-           * *           
             2            
 600000 600000 2 0 1
 
@@ -1023,155 +1354,103 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 650482
-Hash hits: 185718
-Total states visited: 6473946
-Average states visited: 462424.72
-Time taken sorting: 41.881197
-Hashed states: 24418440422
+ABStates visited: 184120
+Hash hits: 71887
+Total states visited: 5691699
+Average states visited: 258713.6
+Time taken sorting: 10.712567
+Hashed states: 11290101006
 Is state consistent? true
-My move: 12 14 11 15 -1 -1
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+My move: 12 14 10 12 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 2 * * * *  
- * * * * * * * 1 * * * * 
-* * * * 1 1 * * * * * * *
+ * * * * * * 1 * * * * * 
+* * * * * * * * 2 * * * *
          * * * *         
           * * *          
-           * *           
+           * 2           
             2            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * 1 1 * * 2 * * * *
-         * * * *         
+            1            
+           2 2           
           * * *          
-           * *           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 451689
-Hash hits: 130684
-Total states visited: 6925635
-Average states visited: 461709.0
-Time taken sorting: 43.791839
-Hashed states: 15387305689
-Is state consistent? true
-My move: 12 8 13 9 -1 -1
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * 2 * * * *
-         1 * * *         
-          * * *          
-           * *           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
+ * * * * * * 1 * * * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
-         1 * * 2         
-          * * *          
-           * *           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 537253
-Hash hits: 149719
-Total states visited: 7462888
-Average states visited: 466430.5
-Time taken sorting: 46.520969
-Hashed states: 23147364460
-Is state consistent? true
-My move: 13 9 7 11 -1 -1
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * * * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
          * * * 2         
           * * *          
-           * *           
+           * 2           
+            2            
+600000 600000 2 0 1
+
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 398397
+Hash hits: 146984
+Total states visited: 6090096
+Average states visited: 264786.78
+Time taken sorting: 11.181448000000001
+Hashed states: 14660236822
+Is state consistent? true
+My move: 11 13 5 11 -1 -1
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
+         * * * 2         
+          * * *          
+           * 2           
             2            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+            1            
+           2 2           
+          * * *          
+         1 1 1 2         
+* * * * * 3 * 1 * * * * *
+ * * * * 1 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
          * * * *         
           * * 2          
-           * *           
+           * 2           
             2            
 600000 600000 2 0 1
 
@@ -1179,102 +1458,102 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 392429
-Hash hits: 115106
-Total states visited: 7855317
-Average states visited: 462077.47
-Time taken sorting: 48.163989
-Hashed states: 11791265600
+ABStates visited: 154244
+Hash hits: 57827
+Total states visited: 6244340
+Average states visited: 260180.83
+Time taken sorting: 11.406185
+Hashed states: 741789055
 Is state consistent? true
-My move: 7 11 6 10 -1 -1
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
+My move: 4 14 2 12 -1 -1
+            1            
+           2 2           
+          * 1 *          
+         1 1 1 2         
+* * * * * 3 * * * * * * *
+ * * * * 1 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    2 * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 1 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
          * * * *         
           * * 2          
-           * *           
+           * 2           
             2            
 600000 600000 2 0 2
 
 turn = 2   myturn = 1
 OK lemme think...
-            *            
-           * *           
-          * 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * 1 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
-         * * * *         
-          * * *          
-           * 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 364329
-Hash hits: 115058
-Total states visited: 8219646
-Average states visited: 456647.0
-Time taken sorting: 49.583235
-Hashed states: 10170239181
-Is state consistent? true
-My move: 6 10 2 10 -1 -1
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+            1            
+           2 2           
+          * 1 *          
+         1 1 1 2         
+* * * * * 3 * * * * * * *
+ * * * * 1 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * 2 * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 2 * * * * *  
- * * * * * * * 1 * * * * 
-* * * * * 1 * * * * * * *
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
          * * * *         
-          * * *          
+          * * 2          
            * 2           
             2            
-600000 600000 2 0 2
+600000 600000 2 0 1
 
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 182903
+Hash hits: 52773
+Total states visited: 6427243
+Average states visited: 257089.72
+Time taken sorting: 11.617946
+Hashed states: 7498122682
+Is state consistent? true
+My move: 5 9 4 8 -1 -1
+            1            
+           2 2           
+          * 1 *          
+         1 1 1 2         
+* * * * 1 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * 2 * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * * 2 1 * * * * 
-* * * * * 1 * * * * * * *
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
          * * * *         
-          * * *          
+          * * 2          
+           * 2           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            1            
+           2 2           
+          * 1 *          
+         1 1 1 2         
+* * * * 1 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * 2 * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * * * * * * * * * *
+         * * * *         
+          * * 2          
            * 2           
             2            
 600000 600000 2 0 1
@@ -1283,50 +1562,102 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 715927
-Hash hits: 216868
-Total states visited: 8935573
-Average states visited: 470293.3
-Time taken sorting: 52.880067000000004
-Hashed states: 26776472360
+ABStates visited: 223458
+Hash hits: 62858
+Total states visited: 6650701
+Average states visited: 255796.19
+Time taken sorting: 11.827903000000001
+Hashed states: 6446154212
 Is state consistent? true
-My move: 11 15 11 11 -1 -1
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
+My move: 4 8 2 14 -1 -1
+            1            
+           2 2           
+          * 1 1          
+         1 1 1 2         
+* * * * * 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * 2 * * 1 * * * * *  
+ * * * * * * * * * * * * 
 * * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+         * * * *         
+          * * 2          
+           * 2           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            1            
+           2 2           
+          * 1 1          
+         1 1 1 2         
+* * * * * 3 * * * * * * *
+ * * * * * 1 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * 1 2 * * * * * 
-* * * * * 1 * * * * * * *
+ * * * 2 * * * * * * * * 
+* * * * * * * * * * * * *
          * * * *         
-          * * *          
+          * * 2          
            * 2           
             2            
-600000 600000 2 0 2
+600000 600000 2 0 1
 
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
+turn = 1   myturn = 1
+It is my turn and I am thinking
+Progress is: Interacting
+Using AlphaBastard...
+ABStates visited: 187391
+Hash hits: 50470
+Total states visited: 6838092
+Average states visited: 253262.67
+Time taken sorting: 12.029806
+Hashed states: 7025129948
+Is state consistent? true
+My move: 5 11 4 12 -1 -1
+            1            
+           2 2           
+          * 1 1          
+         1 1 1 2         
+* * * * * 3 1 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
   * * * * * 1 * * * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * 1 * * * * * * 
-* * * * * 1 * * * * * * *
-         * 2 * *         
-          * * *          
+ * * * 2 * * * * * * * * 
+* * * * * * * * * * * * *
+         * * * *         
+          * * 2          
+           * 2           
+            2            
+600000 600000 2 0 2
+
+turn = 2   myturn = 1
+OK lemme think...
+            1            
+           2 2           
+          * 1 1          
+         1 1 1 2         
+* * * * * 3 1 * * * * * *
+ * * * * * * 1 * * * * * 
+  * * * * 2 * 2 * * * *  
+   * 2 * * * * * * * *   
+    * * * * 3 * 1 * *    
+   * * * * * * * * * *   
+  * * * * * 1 * * * * *  
+ * * * * * * * * * * * * 
+* * * * 2 * * * * * * * *
+         * * * *         
+          * * 2          
            * 2           
             2            
 600000 600000 2 0 1
@@ -1335,758 +1666,30 @@ turn = 1   myturn = 1
 It is my turn and I am thinking
 Progress is: Interacting
 Using AlphaBastard...
-ABStates visited: 675393
-Hash hits: 208870
-Total states visited: 9610966
-Average states visited: 480548.3
-Time taken sorting: 56.049485000000004
-Hashed states: 26017440586
-Is state consistent? true
-My move: 12 10 6 16 -1 -1
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * 1 * * * * * * 
-* * * * * * * * * * * * *
-         * 2 * *         
-          * * *          
-           * 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * 1 * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 * *          
-           * 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 522161
-Hash hits: 158549
-Total states visited: 10133127
-Average states visited: 482529.84
-Time taken sorting: 58.215454
-Hashed states: 18201345488
-Is state consistent? true
-My move: 11 11 7 11 -1 -1
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 * *          
-           * 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * *           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 377529
-Hash hits: 117080
-Total states visited: 10510656
-Average states visited: 477757.1
-Time taken sorting: 59.707672
-Hashed states: 12800247718
-Is state consistent? true
-My move: 2 12 1 13 -1 -1
-            *            
-           * 1           
-          1 * 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * 2 * *    
-   * * * * 3 * * * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 * 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 783038
-Hash hits: 304290
-Total states visited: 11293694
-Average states visited: 491030.2
-Time taken sorting: 62.197978000000006
-Hashed states: 19921458900
-Is state consistent? true
-My move: 6 12 2 12 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * 2 * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * * * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * 1 * 2 * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 558456
-Hash hits: 239377
-Total states visited: 11852150
-Average states visited: 493839.6
-Time taken sorting: 64.540749
-Hashed states: 21218297943
-Is state consistent? true
-My move: 10 10 4 16 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * 2 * * *   
-  * * * * * * 2 * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * 1 1 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * 2 * * * *  
- * * * * * * 2 * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 361290
-Hash hits: 163006
-Total states visited: 12213440
-Average states visited: 488537.6
-Time taken sorting: 65.707634
-Hashed states: 10652187713
-Is state consistent? true
-My move: 7 11 6 12 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * 1 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * 2 * * * *  
- * * * * * * 2 * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 * 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * 1 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * 2 * * * * * 
-* * * * * * 2 * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 278557
-Hash hits: 105373
-Total states visited: 12491997
-Average states visited: 480461.44
-Time taken sorting: 66.561181
-Hashed states: 8280164975
-Is state consistent? true
-My move: 7 13 5 15 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 1 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * 2 * * * * * 
-* * * * * * 2 * * * * * *
-         * * * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 * * * *
- * * * * 1 * 1 1 2 * * * 
-  * * * * * 1 * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * 2 * * * * * *
-         * 2 * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 219033
-Hash hits: 79329
-Total states visited: 12711030
-Average states visited: 470778.88
-Time taken sorting: 67.28797800000001
-Hashed states: 7290132474
-Is state consistent? true
-My move: 6 12 4 18 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 1 * * *
- * * * * 1 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * 2 * * * * * *
-         * 2 * *         
-          * * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * * * * 1 1 * * *
- * * * * 1 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * 2 * *         
-          2 * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 193538
-Hash hits: 62248
-Total states visited: 12904568
-Average states visited: 460877.44
-Time taken sorting: 67.85923700000001
-Hashed states: 6655124688
-Is state consistent? true
-My move: 5 9 4 10 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 2 2 2         
-* * * * * 1 * * 1 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * 2 * *         
-          2 * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 * 2 2         
-* * * * * 1 * * 1 1 * * *
- * * * * 2 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * 2 * *         
-          2 * *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 153230
-Hash hits: 52239
-Total states visited: 13057798
-Average states visited: 450268.9
-Time taken sorting: 68.47412200000001
-Hashed states: 766793381
-Is state consistent? true
-My move: 4 10 3 11 -1 -1
-            *            
-           * 1           
-          1 1 1          
-         2 1 2 2         
-* * * * * * * * 1 1 * * *
- * * * * 2 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * 2 * *         
-          2 * *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           * 1           
-          1 1 1          
-         2 1 2 2         
-* * * * * * * * 1 1 * * *
- * * * * 2 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 149304
-Hash hits: 48042
-Total states visited: 13207102
-Average states visited: 440236.72
-Time taken sorting: 68.898261
-Hashed states: 456696745
-Is state consistent? true
-My move: 2 10 1 11 -1 -1
-            *            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * * 1 1 * * *
- * * * * 2 * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            *            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * * 1 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * 2 * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 149106
-Hash hits: 46874
-Total states visited: 13356208
-Average states visited: 430845.4
-Time taken sorting: 69.300404
-Hashed states: 429997984
-Is state consistent? true
-My move: 4 16 0 12 -1 -1
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * * * 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * 2 * * 1 * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * * * 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * * * * 1 * * *  
-   * * * 2 * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 132398
-Hash hits: 46023
-Total states visited: 13488606
-Average states visited: 421518.94
-Time taken sorting: 69.712355
-Hashed states: 514381277
-Is state consistent? true
-My move: 6 16 4 14 -1 -1
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * 1 * 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * * * * * * * *  
-   * * * 2 * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * * 1 * 1 * * *
- * * * * * * 1 1 2 * * * 
-  * * * * * * * * * * *  
-   * * * * * * 3 * * *   
-    * * * 2 * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 62981
-Hash hits: 23300
-Total states visited: 13551587
-Average states visited: 410654.16
-Time taken sorting: 69.934106
-Hashed states: 339636326
-Is state consistent? true
-My move: 5 13 4 12 -1 -1
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * 1 1 * 1 * * *
- * * * * * * * 1 2 * * * 
-  * * * * * * * * * * *  
-   * * * * * * 3 * * *   
-    * * * 2 * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * * * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 2
-
-turn = 2   myturn = 1
-OK lemme think...
-            1            
-           1 1           
-          * 1 1          
-         2 1 2 2         
-* * * * * * 1 1 * 1 * * *
- * * * * * * * 1 2 * * * 
-  * * * * * * * * * * *  
-   * * * * * * 3 * * *   
-    * * * * * * * * *    
-   * * * * 3 * * * * *   
-  * * * * * 2 * * * * *  
- * * * * * * * * * * * * 
-* * * * * * * * * * * * *
-         * * * *         
-          2 2 *          
-           2 2           
-            2            
-600000 600000 2 0 1
-
-turn = 1   myturn = 1
-It is my turn and I am thinking
-Progress is: Interacting
-Using AlphaBastard...
-ABStates visited: 83676
-Hash hits: 28906
-Total states visited: 13635263
-Average states visited: 401037.16
-Time taken sorting: 70.217483
-Hashed states: 385650954
+ABStates visited: 148167
+Hash hits: 32833
+Total states visited: 6986259
+Average states visited: 249509.25
+Time taken sorting: 12.170020000000001
+Hashed states: 5218110168
 Is state consistent? true
 My move: 4 12 2 10 -1 -1
             1            
-           1 1           
-          1 1 1          
-         2 1 2 2         
-0 0 0 0 0 0 0 1 0 1 0 0 0
- 0 0 0 0 0 0 0 1 2 0 0 0 
-  0 0 0 0 0 0 0 0 0 0 0  
-   0 0 0 0 0 0 3 0 0 0   
-    0 0 0 0 0 0 0 0 0    
-   0 0 0 0 3 0 0 0 0 0   
-  0 0 0 0 0 2 0 0 0 0 0  
- 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0
-         0 0 0 0         
-          2 2 0          
            2 2           
+          1 1 1          
+         1 1 1 2         
+0 0 0 0 0 3 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 1 0 0 0 0 0 
+  0 0 0 0 2 0 2 0 0 0 0  
+   0 2 0 0 0 0 0 0 0 0   
+    0 0 0 0 3 0 1 0 0    
+   0 0 0 0 0 0 0 0 0 0   
+  0 0 0 0 0 1 0 0 0 0 0  
+ 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 2 0 0 0 0 0 0 0 0
+         0 0 0 0         
+          0 0 2          
+           0 2           
             2            
 600000 600000 2 0 2
 

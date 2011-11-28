@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Util {
@@ -106,7 +109,7 @@ public class Util {
 		return prevProg; // If no decision can be made return prevProg
 						 // (other option is to simply return unknown, but prevProg should reduce computations)
 	}
-	
+
 	private static boolean interacting(Board board, float dist){
 		Piece[] myPieces = getPieces(board,1);
 		Piece[] hisPieces = getPieces(board,2);
@@ -118,7 +121,7 @@ public class Util {
 		
 		return false;
 	}
-	
+
 	private static Piece[] getPieces(Board board, int player){
 		Piece[] pieces = new Piece[10]; 
 		int index = 0;
@@ -150,6 +153,67 @@ public class Util {
 		return row <= bottomR && row >= topR;
 	}
 
+	public static boolean isInHomeTriangle(int row, int turn) {
+		int topR = turn == 2 ? 0 : 13;
+		int bottomR = turn == 2? 3 : 16;
+		return row <= bottomR && row >= topR;
+	}
+
+  public static boolean isInOpponentsHalf(int row, int turn) {
+    int midR = 8;
+    return turn == 1 ? row < midR : row > midR;
+  }
+
+  /*
+   * Learning algorithm helper functions
+   */
+
+  public static void partitionExamples(int k, int kfold,
+      ArrayList<Example> allExamples, ArrayList<Example> trainingExamples,
+      ArrayList<Example> testExamples) {
+    if (k < 0 || k >= kfold) {
+      System.err.println("FFFFFFFUUUUUUUUUUU!!! Invalid k.");
+      System.exit(0);
+    }
+    int bucketSize = allExamples.size() / kfold;
+    int start = bucketSize*k;
+    int end = start+bucketSize;
+    int idx = 0;
+    trainingExamples.clear();
+    testExamples.clear();
+    for (Example x : allExamples) {
+      if (idx >= start && idx < end)
+        testExamples.add(x);
+      else
+        trainingExamples.add(x);
+      idx++;
+    }
+  }
+
+  // typical moves are ones that go down the main area of the board
+  public static boolean isTypicalMove(Move m) {
+    int top = 16;
+    int bottom = 0;
+    int left = 7;
+    int right = 17;
+    return m.c2 >= left && m.c2 <= right && m.r2 <= top && m.r2 >= bottom;
+  }
+
+  public static List<Move> removeLosingMoves(List<Move> moveSet) {
+    if (Const.LEARN_LIKE_A_BOSS) {
+      List<Move> newMoveSet = new LinkedList<Move>();
+      for (Move m : moveSet) {
+        Example x = new Example(m);
+        if (Util.isTypicalMove(m) || AwesomeAI.moveClassifier.h(x) == 1) {
+          newMoveSet.add(m);
+        }
+      }
+      return newMoveSet;
+    } else {
+      return moveSet;
+    }
+  }
+
 	/*
 	 * Helpful print functions for great justice.
 	 */
@@ -180,7 +244,11 @@ public class Util {
 		System.err.println("Is state consistent? " + state.equalsBoard(board));
 	}
 
+  public static String moveToString(Move m) {
+    return "Move: "+m.r1+" "+m.c1+" "+m.r2+" "+m.c2+ " "+m.r3+" "+m.c3;
+  }
+
 	public static void printMove(Move m) {
-		System.err.println("Move: "+m.r1+" "+m.c1+" "+m.r2+" "+m.c2+ " "+m.r3+" "+m.c3);
+		System.err.println(moveToString(m));
 	}
 }
