@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.lang.Float;
+import java.math.BigInteger;
+import java.util.BitSet;
 
 public class AB_BlackBox {
   private boolean useMoveClassifier = false;
@@ -17,8 +19,26 @@ public class AB_BlackBox {
 	private static int totalStatesVisited = 0;
 	private static int numtimes = 0;
 
+	
+	private static final int tenRepBits=47;
+	//precompute all the factorials we may ever need
+	private static long[][] precomputedCombinations;
+	//static initialization
+	static {
+		precomputedCombinations=new long[122][16];
+		for(int n=0;n<precomputedCombinations.length;n++){
+			for(int k=0;k<precomputedCombinations[n].length;k++){
+				precomputedCombinations[n][k]=computeCombination(n,k);
+			}
+		}
+	}
+	static long lookupCombination(int n,int k){
+		return precomputedCombinations[n][k];
+	}
+	
 	int thisPlayer;
 	int otherPlayer;
+	int expectedSize;
 
 	HashMap<HashableBoard, Float> maxPlayerHash = new HashMap<HashableBoard, Float>(100000);
 	HashMap<HashableBoard, Float> minPlayerHash = new HashMap<HashableBoard, Float>(100000);
@@ -60,6 +80,7 @@ public class AB_BlackBox {
 		thisPlayer=whichPlayer;
 		otherPlayer=3-thisPlayer;
 		
+		
 		horzDistWeight=horz;
 		vertDistWeight=vert;
 		stragglerWeight = straggler;
@@ -71,17 +92,20 @@ public class AB_BlackBox {
 	public AB_BlackBox.Message gimmeAMove(Board b,int depth){
 		maxPlayerHash.clear();
 		minPlayerHash.clear();
+		//figure out what the maximum number of pieces among piece types to determine min size of hash
+		//also records which bits are not movable and are thus ignored
+		
 		hashHits = 0;
 		statesVisited = 0;
     useMoveClassifier = Const.LEARN_LIKE_A_BOSS ? true : false;
 
 		Move best = recompute(b,depth);
-    if (best == null) {
-      // try again without the move classifier
-      System.err.println("Move classifier off...");
-      useMoveClassifier = false;
-      best = recompute(b, depth);
-    }
+	    if (best == null) {
+	      // try again without the move classifier
+	      System.err.println("Move classifier off...");
+	      useMoveClassifier = false;
+	      best = recompute(b, depth);
+	    }
 
 		// begin data printing:
 		System.err.println("ABStates visited: " + statesVisited);
@@ -94,6 +118,9 @@ public class AB_BlackBox {
 		System.err.println("Time taken sorting: " + (time * Math.pow(10, -9)));
 		System.err.println("Hashed states: " + maxPlayerHash.size() + minPlayerHash.size());
 
+	    //clear the hashtables after computation to not use memory
+		maxPlayerHash.clear();
+		minPlayerHash.clear();
 		if(best==null){
 			return Message.NEED_TO_RECOMPUTE;
 		}else{
@@ -170,7 +197,6 @@ public class AB_BlackBox {
 			long startTime = System.nanoTime();
 			Collections.sort(moveSet, new Comparator<Move>(){
         float baseUtility = utilityOfState(b, thisPlayer);
-				@Override
 				public int compare(Move m1, Move m2) {
           float utility1 = baseUtility;
           float utility2 = baseUtility;
@@ -241,7 +267,6 @@ public class AB_BlackBox {
 			long startTime = System.nanoTime();
 			Collections.sort(moveSet, new Comparator<Move>(){
         float baseUtility = utilityOfState(b, thisPlayer);
-				@Override
 				public int compare(Move m1, Move m2) {
           float utility1 = baseUtility;
           float utility2 = baseUtility;
@@ -419,46 +444,84 @@ public class AB_BlackBox {
     return utilToAdd;
   }
 
-	private static class HashableBoard {
-
-		byte[] boardByteArray = new byte[(Const.NUM_VALID_CELLS+3)/4];
-
+	private class HashableBoard { //!! designed to only handle up to 15 special marbles total
+		//order will be player1, player2, special
+		long[] rep=new long[2];
+		
 		public HashableBoard(Board b) {
-			//optimization:
-			//each byte can actually hold the representation of 4 cells
-			int index = 0;
-			int indexInByte = 0;
+			int[] myboard=new int[121];
+			int index=0;
+			//convert each board from 1,2,3 pieces to 0,1,2 pieces
 			for (int i = 0; i < Const.BOARD_HEIGHT; i++) {
 				for (int j = 0; j < Const.BOARD_WIDTH; j++) {
 					int at=b.at(i, j);
 					if (at != -1) {
-						//then the integer is 0,1,2, or 3
-						boardByteArray[index] += (byte)(at<<indexInByte);
-						//update positions to add representation
-						indexInByte+=2;
-						if(indexInByte==8){
-							index++;
-							indexInByte=0;
-						}
+						myboard[index]=at;
+						index++;
 					}
 				}
 			}
+			represent(myboard);
 		}
-
-		public byte[] getBoardByteArray() { return boardByteArray; }
-
-		@Override
-			public int hashCode() {
-				return Arrays.hashCode(boardByteArray);
+		
+		//board is the linear board array
+		//each piece has been counted
+		void represent(int[] board){
+			for(int x=1;x<=2;x++){//x determines the type of piece we are hashing currently
+				long totalSum=0;
+				int k=10;//only looking at player marbles, special marbles not moved during alpha/beta search
+				for(int i=0;i<board.length && k>0;i++){
+					if(board[i]==x){
+						if(k==1){
+							//subtract 1 to change range from [1,x] to [0,x-1]
+							totalSum+=(board.length-i-1);
+							//break; //add this condition to the for loop instead
+						}else{
+							totalSum+=lookupCombination(board.length-i-1,k);
+						}
+						k--;
+					}
+				}
+				rep[x-1]=totalSum;
 			}
-
+		}
+		
 		@Override
-			public boolean equals(Object o) {
+		public int hashCode() {
+			return Arrays.hashCode(rep);
+		}
+		@Override
+		public boolean equals(Object o) {
+			if(o instanceof HashableBoard){
 				HashableBoard otherBoard = (HashableBoard) o;
-				return Arrays.equals(boardByteArray, otherBoard.getBoardByteArray());
+				return (rep.equals(otherBoard));
+			}else{
+				return false;
 			}
+		}
+		
 	}
-
+	
+	private static long computeCombination(int n,int k){//very slow
+		//assumes input is good and that the result can fit into a long
+		if(k>n)return 0;
+		if(k==0)return 1;
+		if(k<n/2){
+			k=n-k;
+		}
+		BigInteger product=BigInteger.ONE;
+		for(int i=k+1;i<=n;i++){
+			product=product.multiply(toBigInt(i));
+		}
+		for(int i=1;i<=(n-k);i++){
+			product=product.divide(toBigInt(i));
+		}
+		return Long.parseLong(product.toString());
+	}
+	private static BigInteger toBigInt(int i){
+		return new BigInteger(Integer.toBinaryString(i),2);
+	}
+		
 
 	/*
 	class HashableBoard {

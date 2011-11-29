@@ -106,7 +106,7 @@ public class AwesomeAI extends Player {
 		Move m = null;
 
 		AB_BlackBox abbox=new AB_BlackBox(getMyturn(), horz, vert, straggler, chain);
-		AB_BlackBox.Message output=ABSearch.gimmeAMove(getBoard(), 5);
+		AB_BlackBox.Message output=ABSearch.gimmeAMove(getBoard(), 6);
 
 		if(output==AB_BlackBox.Message.NEED_TO_RECOMPUTE){
 			System.err.println("oh no, ab search not finding a move. sending null move");
